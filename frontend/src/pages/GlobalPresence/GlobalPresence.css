@@ -1,0 +1,1580 @@
+/* ==========================================
+   GLOBAL HERO
+========================================== */
+
+.globalHero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        rgba(6,35,61,.82),
+        rgba(6,35,61,.72)
+    ),
+    url("../../assets/images/global/g-1.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    animation:bgZoom 20s linear infinite alternate;
+}
+
+/* ================= OVERLAY ================= */
+
+.heroOverlay{
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(
+        90deg,
+        rgba(6,35,61,.92) 0%,
+        rgba(6,35,61,.80) 45%,
+        rgba(6,35,61,.45) 100%
+    );
+}
+
+/* ================= CONTENT ================= */
+
+.heroContainer{
+    position:relative;
+    z-index:2;
+    max-width:1400px;
+    width:100%;
+    margin:auto;
+    padding:140px 8%;
+}
+
+.heroTag{
+    display:inline-block;
+    background:#ff7a00;
+    color:#fff;
+    padding:12px 26px;
+    border-radius:40px;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:1px;
+    margin-bottom:30px;
+}
+
+.heroContainer h1{
+    font-size:72px;
+    color:#fff;
+    line-height:1.08;
+    margin-bottom:30px;
+    font-weight:800;
+}
+
+.heroContainer p{
+    max-width:700px;
+    color:#e5e5e5;
+    font-size:19px;
+    line-height:1.9;
+    margin-bottom:45px;
+}
+
+/* ================= BUTTONS ================= */
+
+.heroButtons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.primaryBtn,
+.secondaryBtn{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:17px 34px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.primaryBtn{
+
+    background:#ff7a00;
+    color:#fff;
+
+}
+
+.primaryBtn:hover{
+
+    background:#ff9100;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 35px rgba(255,122,0,.35);
+
+}
+
+.secondaryBtn{
+
+    color:#fff;
+
+    border:2px solid rgba(255,255,255,.25);
+
+    backdrop-filter:blur(10px);
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.secondaryBtn:hover{
+
+    background:#fff;
+
+    color:#06233d;
+
+    transform:translateY(-4px);
+
+}
+
+/* ================= SCROLL ================= */
+
+.scrollDown{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:40px;
+
+    transform:translateX(-50%);
+
+    z-index:5;
+
+}
+
+.scrollDown span{
+
+    width:28px;
+
+    height:48px;
+
+    border:2px solid #fff;
+
+    border-radius:30px;
+
+    display:block;
+
+    position:relative;
+
+}
+
+.scrollDown span::before{
+
+    content:"";
+
+    width:6px;
+
+    height:6px;
+
+    background:#fff;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    left:50%;
+
+    top:8px;
+
+    transform:translateX(-50%);
+
+    animation:scroll 2s infinite;
+
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes scroll{
+
+    0%{
+        opacity:0;
+        top:8px;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        top:26px;
+    }
+
+}
+
+@keyframes bgZoom{
+
+    from{
+        background-size:100%;
+    }
+
+    to{
+        background-size:108%;
+    }
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px){
+
+.heroContainer h1{
+
+font-size:58px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.heroContainer{
+
+padding:120px 5%;
+
+}
+
+.heroContainer h1{
+
+font-size:42px;
+
+}
+
+.heroContainer p{
+
+font-size:16px;
+
+}
+
+.heroButtons{
+
+flex-direction:column;
+
+}
+
+.primaryBtn,
+.secondaryBtn{
+
+justify-content:center;
+
+width:100%;
+
+}
+
+.scrollDown{
+
+display:none;
+
+}
+
+}
+
+
+
+/*=========================================
+      OUR PRESENCE
+=========================================*/
+
+.presence-section{
+
+    padding:120px 8%;
+
+    background:#fff;
+
+}
+
+.presence-container{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+/* LEFT */
+
+.presence-tag{
+
+    display:inline-block;
+
+    padding:10px 24px;
+
+    background:#eef5ff;
+
+    color:#0b2c5f;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    margin-bottom:25px;
+
+}
+
+.presence-content h2{
+
+    font-size:52px;
+
+    line-height:1.2;
+
+    color:#071a35;
+
+    margin-bottom:25px;
+
+}
+
+.presence-content h2 span{
+
+    color:#ff6b00;
+
+}
+
+.presence-content p{
+
+    color:#666;
+
+    line-height:1.9;
+
+    font-size:17px;
+
+    margin-bottom:35px;
+
+}
+
+.presence-list{
+
+    display:grid;
+
+    gap:18px;
+
+    margin-bottom:40px;
+
+}
+
+.presence-item{
+
+    font-size:17px;
+
+    color:#333;
+
+    font-weight:500;
+
+}
+
+.presence-btn{
+
+    border:none;
+
+    padding:16px 35px;
+
+    background:#ff6b00;
+
+    color:#fff;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.35s;
+
+}
+
+.presence-btn:hover{
+
+    background:#071a35;
+
+    transform:translateY(-5px);
+
+}
+
+/* RIGHT */
+
+.presence-image{
+
+    position:relative;
+
+}
+
+.presence-image img{
+
+    width:100%;
+
+    border-radius:25px;
+
+    display:block;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.15);
+
+}
+
+/* Floating Cards */
+
+.presence-card{
+
+    position:absolute;
+
+    background:#fff;
+
+    padding:22px 28px;
+
+    border-radius:18px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+
+    text-align:center;
+
+}
+
+.presence-card h3{
+
+    color:#ff6b00;
+
+    font-size:34px;
+
+    margin-bottom:6px;
+
+}
+
+.presence-card span{
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+.card-one{
+
+    top:-25px;
+
+    right:-20px;
+
+}
+
+.card-two{
+
+    bottom:-25px;
+
+    left:-20px;
+
+}
+
+/*=========================================
+      Responsive
+=========================================*/
+
+@media(max-width:992px){
+
+.presence-container{
+
+grid-template-columns:1fr;
+
+gap:60px;
+
+}
+
+.presence-content{
+
+text-align:center;
+
+}
+
+.presence-list{
+
+justify-items:center;
+
+}
+
+.card-one{
+
+right:20px;
+
+}
+
+.card-two{
+
+left:20px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.presence-section{
+
+padding:80px 5%;
+
+}
+
+.presence-content h2{
+
+font-size:38px;
+
+}
+
+.presence-content p{
+
+font-size:16px;
+
+}
+
+.presence-card{
+
+padding:18px 20px;
+
+}
+
+.presence-card h3{
+
+font-size:26px;
+
+}
+
+}
+
+
+/*=========================================
+        NETWORK SECTION
+=========================================*/
+
+.network-section{
+
+padding:120px 8%;
+
+background:#f8fafc;
+
+}
+
+.network-title{
+
+max-width:900px;
+
+margin:auto;
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.network-title span{
+
+display:inline-block;
+
+padding:10px 22px;
+
+background:#eef4ff;
+
+border-radius:50px;
+
+color:#0b2c5f;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:20px;
+
+}
+
+.network-title h2{
+
+font-size:52px;
+
+color:#071a35;
+
+margin-bottom:20px;
+
+}
+
+.network-title h2 span{
+
+color:#ff6b00;
+
+}
+
+.network-title p{
+
+font-size:18px;
+
+color:#666;
+
+line-height:1.8;
+
+}
+
+.network-grid{
+
+display:grid;
+
+grid-template-columns:repeat(5,1fr);
+
+gap:30px;
+
+max-width:1400px;
+
+margin:auto;
+
+}
+
+.network-card{
+
+background:#fff;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+transition:.35s;
+
+border-top:5px solid transparent;
+
+}
+
+.network-card:hover{
+
+transform:translateY(-12px);
+
+border-top:5px solid #ff6b00;
+
+box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+}
+
+.network-card h3{
+
+font-size:28px;
+
+color:#071a35;
+
+margin-bottom:18px;
+
+}
+
+.network-card p{
+
+color:#666;
+
+line-height:1.8;
+
+font-size:16px;
+
+}
+
+/*==============================
+Responsive
+==============================*/
+
+@media(max-width:992px){
+
+.network-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.network-section{
+
+padding:80px 5%;
+
+}
+
+.network-title h2{
+
+font-size:36px;
+
+}
+
+.network-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.network-card{
+
+padding:30px;
+
+}
+
+}
+
+
+/* ==========================================
+        PAN INDIA PRESENCE
+========================================== */
+
+.india-presence{
+    padding:120px 8%;
+    background:linear-gradient(135deg,#071a35,#0f2d5c,#071a35);
+    overflow:hidden;
+    position:relative;
+}
+
+.india-presence::before{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    background:rgba(255,107,0,.08);
+    border-radius:50%;
+    top:-250px;
+    right:-200px;
+    filter:blur(120px);
+}
+
+.india-heading{
+    text-align:center;
+    max-width:900px;
+    margin:0 auto 80px;
+    position:relative;
+    z-index:2;
+}
+
+.india-heading span{
+    display:inline-block;
+    padding:10px 25px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:50px;
+    color:#ff8c32;
+    font-weight:600;
+    letter-spacing:2px;
+    margin-bottom:25px;
+}
+
+.india-heading h2{
+    color:#fff;
+    font-size:56px;
+    line-height:1.2;
+    margin-bottom:25px;
+}
+
+.india-heading h2 span{
+    background:none;
+    border:none;
+    padding:0;
+    color:#ff6b00;
+}
+
+.india-heading p{
+    color:#d7d7d7;
+    line-height:1.9;
+    font-size:18px;
+}
+
+.india-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1.2fr 1fr;
+    gap:45px;
+    align-items:center;
+    position:relative;
+    z-index:2;
+}
+
+/* LEFT */
+
+.india-left{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.feature-card{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:25px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:18px;
+    transition:.35s;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
+    border-color:#ff6b00;
+    box-shadow:0 15px 35px rgba(255,107,0,.25);
+}
+
+.feature-card svg{
+    font-size:38px;
+    color:#ff6b00;
+    flex-shrink:0;
+}
+
+.feature-card h3{
+    color:#fff;
+    margin-bottom:8px;
+    font-size:22px;
+}
+
+.feature-card p{
+    color:#d6d6d6;
+    line-height:1.6;
+}
+
+/* MAP */
+
+.india-map{
+    position:relative;
+    text-align:center;
+}
+
+.india-map img{
+    width:100%;
+    max-width:520px;
+    transition:.4s;
+}
+
+.india-map img:hover{
+    transform:scale(1.03);
+}
+
+/* Location Pins */
+
+.pin{
+    position:absolute;
+    width:16px;
+    height:16px;
+    background:#ff6b00;
+    border-radius:50%;
+    box-shadow:0 0 0 rgba(255,107,0,.8);
+    animation:pulse 2s infinite;
+}
+
+.gujarat{top:62%;left:36%;}
+.maharashtra{top:72%;left:39%;}
+.rajasthan{top:43%;left:34%;}
+.delhi{top:33%;left:47%;}
+.mp{top:53%;left:47%;}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+        box-shadow:0 0 0 0 rgba(255,107,0,.7);
+    }
+    70%{
+        transform:scale(1.3);
+        box-shadow:0 0 0 18px rgba(255,107,0,0);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+/* RIGHT */
+
+.india-right{
+    display:grid;
+    gap:22px;
+}
+
+.stat-card{
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    transition:.35s;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.stat-card:hover{
+    transform:translateY(-10px);
+    background:#ff6b00;
+}
+
+.stat-card svg{
+    font-size:34px;
+    color:#ff6b00;
+    margin-bottom:18px;
+    transition:.35s;
+}
+
+.stat-card:hover svg{
+    color:#fff;
+}
+
+.stat-card h2{
+    font-size:42px;
+    color:#071a35;
+    margin-bottom:10px;
+    transition:.35s;
+}
+
+.stat-card:hover h2{
+    color:#fff;
+}
+
+.stat-card p{
+    color:#666;
+    transition:.35s;
+}
+
+.stat-card:hover p{
+    color:#fff;
+}
+
+/* ===========================
+      Responsive
+=========================== */
+
+@media(max-width:1100px){
+
+.india-wrapper{
+    grid-template-columns:1fr;
+    gap:50px;
+}
+
+.india-left,
+.india-right{
+    max-width:700px;
+    margin:auto;
+}
+
+.india-map{
+    order:-1;
+}
+
+}
+
+@media(max-width:768px){
+
+.india-presence{
+    padding:80px 5%;
+}
+
+.india-heading h2{
+    font-size:38px;
+}
+
+.feature-card{
+    padding:20px;
+}
+
+.feature-card h3{
+    font-size:18px;
+}
+
+.stat-card{
+    padding:25px;
+}
+
+.stat-card h2{
+    font-size:32px;
+}
+
+.india-map img{
+    max-width:340px;
+}
+
+}
+
+
+
+/*=========================================
+      WHY CLIENTS TRUST US
+=========================================*/
+
+.trust-section{
+
+padding:120px 8%;
+
+background:#f7f9fc;
+
+}
+
+.trust-heading{
+
+max-width:900px;
+
+margin:auto;
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.trust-heading span{
+
+display:inline-block;
+
+padding:10px 24px;
+
+background:#eef4ff;
+
+color:#0b2c5f;
+
+border-radius:40px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:20px;
+
+}
+
+.trust-heading h2{
+
+font-size:52px;
+
+line-height:1.2;
+
+color:#071a35;
+
+margin-bottom:20px;
+
+}
+
+.trust-heading h2 span{
+
+color:#ff6b00;
+
+}
+
+.trust-heading p{
+
+font-size:18px;
+
+color:#666;
+
+line-height:1.8;
+
+}
+
+.trust-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+}
+
+.trust-card{
+
+background:#fff;
+
+padding:45px 35px;
+
+border-radius:20px;
+
+text-align:center;
+
+transition:.4s;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+border-top:4px solid transparent;
+
+}
+
+.trust-card:hover{
+
+transform:translateY(-12px);
+
+border-top:4px solid #ff6b00;
+
+box-shadow:0 25px 60px rgba(0,0,0,.15);
+
+}
+
+.trust-card svg{
+
+font-size:55px;
+
+color:#ff6b00;
+
+margin-bottom:25px;
+
+transition:.3s;
+
+}
+
+.trust-card:hover svg{
+
+transform:rotate(8deg) scale(1.1);
+
+}
+
+.trust-card h3{
+
+font-size:24px;
+
+color:#071a35;
+
+margin-bottom:15px;
+
+}
+
+.trust-card p{
+
+font-size:16px;
+
+color:#666;
+
+line-height:1.8;
+
+}
+
+/*=========================
+Responsive
+=========================*/
+
+@media(max-width:992px){
+
+.trust-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.trust-section{
+
+padding:80px 5%;
+
+}
+
+.trust-heading h2{
+
+font-size:38px;
+
+}
+
+.trust-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+
+/*=========================================
+      WHY CLIENTS TRUST US
+=========================================*/
+
+.trust-section{
+
+padding:120px 8%;
+
+background:#f7f9fc;
+
+}
+
+.trust-heading{
+
+max-width:900px;
+
+margin:auto;
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.trust-heading span{
+
+display:inline-block;
+
+padding:10px 24px;
+
+background:#eef4ff;
+
+color:#0b2c5f;
+
+border-radius:40px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:20px;
+
+}
+
+.trust-heading h2{
+
+font-size:52px;
+
+line-height:1.2;
+
+color:#071a35;
+
+margin-bottom:20px;
+
+}
+
+.trust-heading h2 span{
+
+color:#ff6b00;
+
+}
+
+.trust-heading p{
+
+font-size:18px;
+
+color:#666;
+
+line-height:1.8;
+
+}
+
+.trust-grid{
+
+display:grid;
+
+grid-template-columns:repeat(5,1fr);
+
+gap:30px;
+
+}
+
+.trust-card{
+
+background:#fff;
+
+padding:45px 35px;
+
+border-radius:20px;
+
+text-align:center;
+
+transition:.4s;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+border-top:4px solid transparent;
+
+}
+
+.trust-card:hover{
+
+transform:translateY(-12px);
+
+border-top:4px solid #ff6b00;
+
+box-shadow:0 25px 60px rgba(0,0,0,.15);
+
+}
+
+.trust-card svg{
+
+font-size:55px;
+
+color:#ff6b00;
+
+margin-bottom:25px;
+
+transition:.3s;
+
+}
+
+.trust-card:hover svg{
+
+transform:rotate(8deg) scale(1.1);
+
+}
+
+.trust-card h3{
+
+font-size:24px;
+
+color:#071a35;
+
+margin-bottom:15px;
+
+}
+
+.trust-card p{
+
+font-size:16px;
+
+color:#666;
+
+line-height:1.8;
+
+}
+
+/*=========================
+Responsive
+=========================*/
+
+@media(max-width:992px){
+
+.trust-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.trust-section{
+
+padding:80px 5%;
+
+}
+
+.trust-heading h2{
+
+font-size:38px;
+
+}
+
+.trust-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+/*=========================================
+            CTA SECTION
+=========================================*/
+
+.global-cta{
+
+    padding:140px 8%;
+
+    background:
+    linear-gradient(rgba(7,26,53,.82),
+    rgba(7,26,53,.82)),
+    url("../../assets/images/global/global-cta.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    text-align:center;
+
+    position:relative;
+
+}
+
+.global-cta-overlay{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.cta-tag{
+
+    display:inline-block;
+
+    padding:10px 24px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.12);
+
+    color:#ff8c32;
+
+    letter-spacing:2px;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+.global-cta h2{
+
+    font-size:58px;
+
+    color:#fff;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+}
+
+.global-cta p{
+
+    color:#e6e6e6;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    max-width:760px;
+
+    margin:auto;
+
+    margin-bottom:45px;
+
+}
+
+.cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.cta-orange{
+
+    padding:18px 42px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ff6b00;
+
+    color:#fff;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    font-weight:600;
+
+}
+
+.cta-orange:hover{
+
+    background:#fff;
+
+    color:#071a35;
+
+    transform:translateY(-6px);
+
+}
+
+.cta-white{
+
+    padding:18px 42px;
+
+    border:2px solid #fff;
+
+    border-radius:50px;
+
+    background:transparent;
+
+    color:#fff;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    font-weight:600;
+
+}
+
+.cta-white:hover{
+
+    background:#ff6b00;
+
+    border-color:#ff6b00;
+
+    transform:translateY(-6px);
+
+}
+
+/*==============================
+Responsive
+==============================*/
+
+@media(max-width:768px){
+
+.global-cta{
+
+padding:90px 5%;
+
+}
+
+.global-cta h2{
+
+font-size:38px;
+
+}
+
+.global-cta p{
+
+font-size:16px;
+
+}
+
+.cta-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.cta-orange,
+.cta-white{
+
+width:260px;
+
+}
+
+}
