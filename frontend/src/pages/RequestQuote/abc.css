@@ -568,3 +568,235 @@ width:100%;
 
 }
 
+
+
+
+/* ===================================================
+                RESPONSIVE CSS
+=================================================== */
+
+/* Laptop */
+
+@media (max-width:1200px){
+
+.quoteContent h1{
+    font-size:50px;
+}
+
+.quoteWrapper{
+    gap:35px;
+}
+
+.officeGrid{
+    gap:25px;
+}
+
+}
+
+
+/* Tablet */
+
+@media (max-width:992px){
+
+.quoteHero{
+    min-height:65vh;
+}
+
+.quoteContainer{
+    width:92%;
+}
+
+.quoteContent h1{
+    font-size:42px;
+}
+
+.quoteContent p{
+    font-size:17px;
+}
+
+.quoteButtons{
+    flex-wrap:wrap;
+}
+
+.quoteWrapper{
+    grid-template-columns:1fr;
+}
+
+.quoteFormBox,
+.quoteInfo{
+    padding:35px;
+}
+
+.inputGrid{
+    grid-template-columns:1fr;
+}
+
+.officeGrid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.officeHeader h2{
+    font-size:36px;
+}
+
+.mapHeading h2{
+    font-size:36px;
+}
+
+.ctaContent h2{
+    font-size:40px;
+}
+
+}
+
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.quoteHero{
+    min-height:60vh;
+}
+
+.quoteContent{
+    text-align:center;
+    max-width:100%;
+}
+
+.quoteTag{
+    font-size:13px;
+}
+
+.quoteContent h1{
+    font-size:34px;
+}
+
+.quoteContent p{
+    font-size:16px;
+    line-height:1.8;
+}
+
+.quoteButtons{
+    justify-content:center;
+    flex-direction:column;
+}
+
+.primaryBtn,
+.secondaryBtn{
+    width:100%;
+}
+
+.quoteSection{
+    padding:70px 5%;
+}
+
+.quoteFormBox,
+.quoteInfo{
+    padding:25px;
+}
+
+.officeSection{
+    padding:70px 5%;
+}
+
+.officeGrid{
+    grid-template-columns:1fr;
+}
+
+.officeCard{
+    padding:35px 25px;
+}
+
+.officeHeader h2{
+    font-size:30px;
+}
+
+.mapSection{
+    padding:70px 5%;
+}
+
+.mapHeading h2{
+    font-size:30px;
+}
+
+.mapWrapper iframe{
+    height:350px;
+}
+
+.mapBottom{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.mapButtons{
+    width:100%;
+    flex-direction:column;
+}
+
+.directionBtn,
+.callBtn{
+    width:100%;
+    text-align:center;
+}
+
+.quoteCTA{
+    padding:80px 5%;
+}
+
+.ctaContent h2{
+    font-size:32px;
+}
+
+.ctaButtons{
+    flex-direction:column;
+}
+
+.ctaPrimaryBtn,
+.ctaSecondaryBtn{
+    width:100%;
+}
+
+}
+
+
+/* Small Mobile */
+
+@media (max-width:480px){
+
+.quoteHero{
+    min-height:55vh;
+}
+
+.quoteContent h1{
+    font-size:28px;
+}
+
+.quoteContent p{
+    font-size:15px;
+}
+
+.quoteTag{
+    padding:8px 18px;
+}
+
+.officeHeader h2,
+.mapHeading h2,
+.ctaContent h2{
+    font-size:26px;
+}
+
+.quoteFormBox,
+.quoteInfo{
+    padding:20px;
+}
+
+.officeCard{
+    padding:30px 20px;
+}
+
+.mapWrapper iframe{
+    height:280px;
+}
+
+}
+

@@ -1194,156 +1194,6 @@ grid-template-columns:1fr;
 
 }
 
-
-
-/*=========================================
-      WHY CLIENTS TRUST US
-=========================================*/
-
-.trust-section{
-
-padding:120px 8%;
-
-background:#f7f9fc;
-
-}
-
-.trust-heading{
-
-max-width:900px;
-
-margin:auto;
-
-text-align:center;
-
-margin-bottom:70px;
-
-}
-
-.trust-heading span{
-
-display:inline-block;
-
-padding:10px 24px;
-
-background:#eef4ff;
-
-color:#0b2c5f;
-
-border-radius:40px;
-
-font-weight:600;
-
-letter-spacing:2px;
-
-margin-bottom:20px;
-
-}
-
-.trust-heading h2{
-
-font-size:52px;
-
-line-height:1.2;
-
-color:#071a35;
-
-margin-bottom:20px;
-
-}
-
-.trust-heading h2 span{
-
-color:#ff6b00;
-
-}
-
-.trust-heading p{
-
-font-size:18px;
-
-color:#666;
-
-line-height:1.8;
-
-}
-
-.trust-grid{
-
-display:grid;
-
-grid-template-columns:repeat(5,1fr);
-
-gap:30px;
-
-}
-
-.trust-card{
-
-background:#fff;
-
-padding:45px 35px;
-
-border-radius:20px;
-
-text-align:center;
-
-transition:.4s;
-
-box-shadow:0 15px 40px rgba(0,0,0,.08);
-
-border-top:4px solid transparent;
-
-}
-
-.trust-card:hover{
-
-transform:translateY(-12px);
-
-border-top:4px solid #ff6b00;
-
-box-shadow:0 25px 60px rgba(0,0,0,.15);
-
-}
-
-.trust-card svg{
-
-font-size:55px;
-
-color:#ff6b00;
-
-margin-bottom:25px;
-
-transition:.3s;
-
-}
-
-.trust-card:hover svg{
-
-transform:rotate(8deg) scale(1.1);
-
-}
-
-.trust-card h3{
-
-font-size:24px;
-
-color:#071a35;
-
-margin-bottom:15px;
-
-}
-
-.trust-card p{
-
-font-size:16px;
-
-color:#666;
-
-line-height:1.8;
-
-}
-
 /*=========================
 Responsive
 =========================*/
@@ -1575,6 +1425,318 @@ align-items:center;
 
 width:260px;
 
+}
+
+}
+
+
+
+/* ==========================================
+            RESPONSIVE CSS
+========================================== */
+
+/* ================= Laptop ================= */
+
+@media (max-width:1200px){
+
+.heroContainer h1{
+    font-size:58px;
+}
+
+.presence-content h2{
+    font-size:46px;
+}
+
+.network-title h2{
+    font-size:46px;
+}
+
+.india-heading h2{
+    font-size:48px;
+}
+
+.trust-heading h2{
+    font-size:46px;
+}
+
+.global-cta h2{
+    font-size:50px;
+}
+
+}
+
+
+/* ================= Tablet ================= */
+
+@media (max-width:992px){
+
+.globalHero{
+    min-height:90vh;
+}
+
+.heroContainer{
+    padding:120px 6%;
+}
+
+.heroContainer h1{
+    font-size:52px;
+}
+
+.heroContainer p{
+    font-size:17px;
+}
+
+.presence-section,
+.network-section,
+.india-presence,
+.trust-section,
+.global-cta{
+    padding:90px 6%;
+}
+
+.presence-container{
+    grid-template-columns:1fr;
+    gap:60px;
+}
+
+.presence-content{
+    text-align:center;
+}
+
+.presence-list{
+    justify-items:center;
+}
+
+.network-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.india-wrapper{
+    grid-template-columns:1fr;
+    gap:50px;
+}
+
+.india-map{
+    order:-1;
+}
+
+.india-left,
+.india-right{
+    max-width:700px;
+    margin:auto;
+}
+
+.trust-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.global-cta h2{
+    font-size:46px;
+}
+
+}
+
+
+/* ================= Mobile ================= */
+
+@media (max-width:768px){
+
+.globalHero{
+    min-height:80vh;
+}
+
+.heroContainer{
+    padding:110px 5%;
+    text-align:center;
+}
+
+.heroContainer h1{
+    font-size:40px;
+}
+
+.heroContainer p{
+    font-size:16px;
+}
+
+.heroButtons{
+    flex-direction:column;
+    align-items:center;
+}
+
+.primaryBtn,
+.secondaryBtn{
+    width:100%;
+    max-width:280px;
+    justify-content:center;
+}
+
+.scrollDown{
+    display:none;
+}
+
+/* Presence */
+
+.presence-section{
+    padding:70px 5%;
+}
+
+.presence-content h2{
+    font-size:36px;
+}
+
+.presence-content p{
+    font-size:16px;
+}
+
+.presence-card{
+    position:static;
+    margin-top:20px;
+}
+
+/* Network */
+
+.network-section{
+    padding:70px 5%;
+}
+
+.network-title h2{
+    font-size:34px;
+}
+
+.network-grid{
+    grid-template-columns:1fr;
+}
+
+.network-card{
+    padding:30px;
+}
+
+/* India */
+
+.india-presence{
+    padding:70px 5%;
+}
+
+.india-heading h2{
+    font-size:34px;
+}
+
+.india-heading p{
+    font-size:16px;
+}
+
+.feature-card{
+    padding:20px;
+}
+
+.feature-card h3{
+    font-size:18px;
+}
+
+.stat-card{
+    padding:25px;
+}
+
+.stat-card h2{
+    font-size:30px;
+}
+
+.india-map img{
+    max-width:320px;
+}
+
+/* Trust */
+
+.trust-section{
+    padding:70px 5%;
+}
+
+.trust-heading h2{
+    font-size:34px;
+}
+
+.trust-grid{
+    grid-template-columns:1fr;
+}
+
+.trust-card{
+    padding:30px;
+}
+
+/* CTA */
+
+.global-cta{
+    padding:80px 5%;
+}
+
+.global-cta h2{
+    font-size:34px;
+}
+
+.global-cta p{
+    font-size:16px;
+}
+
+.cta-buttons{
+    flex-direction:column;
+    align-items:center;
+}
+
+.cta-orange,
+.cta-white{
+    width:260px;
+}
+
+}
+
+
+/* ================= Small Mobile ================= */
+
+@media (max-width:480px){
+
+.heroContainer h1{
+    font-size:30px;
+}
+
+.heroContainer p{
+    font-size:15px;
+}
+
+.heroTag,
+.presence-tag,
+.network-title span,
+.india-heading span,
+.trust-heading span,
+.cta-tag{
+    font-size:12px;
+    padding:8px 18px;
+}
+
+.presence-content h2,
+.network-title h2,
+.india-heading h2,
+.trust-heading h2,
+.global-cta h2{
+    font-size:28px;
+}
+
+.primaryBtn,
+.secondaryBtn,
+.cta-orange,
+.cta-white{
+    width:100%;
+    max-width:240px;
+}
+
+.network-card,
+.trust-card,
+.feature-card,
+.stat-card{
+    padding:20px;
+}
+
+.india-map img{
+    max-width:260px;
 }
 
 }
