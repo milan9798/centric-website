@@ -12,7 +12,7 @@ import Projects from "./pages/Projects/projects";
 import ProjectDetails from "./pages/ProjectDetails/projectDetails";
 // import OngoingProjects from "./pages/OngoingProjects/OngoingProjects";
 import Career from "./pages/Career/Career";
-import Gallery from "./pages/Gallery/Gallery";
+import Gallery from "./pages/Gallery/gallery";
 import Certificates from "./pages/Certificates/Certificates";
 
 
