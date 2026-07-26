@@ -8,7 +8,7 @@ import CoreValues from "./pages/CoreValues/CoreValues";
 import Services from "./pages/Services/services";
 import RdsoBridgesMetro from "./pages/Services/RdsoBridgesMetro/RdsoBridgesMetro";
 import PebStructures from "./pages/Services/PebStructures/PebStructures";
-import Projects from "./pages/Projects/Projects";
+import Projects from "./pages/Projects/projects";
 import ProjectDetails from "./pages/ProjectDetails/projectDetails";
 // import OngoingProjects from "./pages/OngoingProjects/OngoingProjects";
 import Career from "./pages/Career/Career";
