@@ -29,7 +29,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar/navbar";
 import Footer from "../../components/Footer/Footer";
-import "./Projects.css";
+import "./projects.css";
 
 import heroImg from "../../assets/images/Projects/hero/hero.jpg";
 import { FaArrowRight } from "react-icons/fa";
