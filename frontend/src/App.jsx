@@ -5,7 +5,7 @@ import AboutPage from "./pages/About/About";
 import Leadership from "./pages/Leadership/Leadership";
 import OurMessage from "./pages/OurMessage/OurMessage";
 import CoreValues from "./pages/CoreValues/CoreValues";
-import Services from "./pages/Services/Services";
+import Services from "./pages/Services/services";
 import RdsoBridgesMetro from "./pages/Services/RdsoBridgesMetro/RdsoBridgesMetro";
 import PebStructures from "./pages/Services/PebStructures/Pebstructures";
 import Projects from "./pages/Projects/Projects";
