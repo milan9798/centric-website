@@ -1,0 +1,307 @@
+/*=========================================
+            STATS SECTION
+=========================================*/
+
+.stats{
+
+    width:100%;
+
+    position:relative;
+
+    margin-top:-90px; 
+
+    z-index:20;
+
+    padding:0 40px 70px;
+
+    background:transparent;
+
+}
+
+.stats-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+/*=========================================
+              CARD
+=========================================*/
+
+.stat-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:40px 25px;
+
+    text-align:center;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+    transition:all .35s ease;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.stat-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:#ff6b00;
+
+    transform:scaleX(0);
+
+    transition:.35s;
+
+}
+
+.stat-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.18);
+
+}
+
+/*=========================================
+              ICON
+=========================================*/
+
+.stat-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:0 auto 25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#FFF3EA;
+
+}
+
+.stat-icon svg{
+
+    width:42px;
+
+    height:42px;
+
+    fill:#ff6b00;
+
+}
+
+/*=========================================
+             NUMBER
+=========================================*/
+
+.stat-card h2{
+
+    font-size:48px;
+
+    color:#0B1F3A;
+
+    margin-bottom:12px;
+
+    font-weight:700;
+
+}
+
+/*=========================================
+             TEXT
+=========================================*/
+
+.stat-card p{
+
+    color:#5B6575;
+
+    font-size:18px;
+
+    line-height:28px;
+
+    font-weight:500;
+
+}
+
+/*=========================================
+            LAPTOP
+=========================================*/
+
+@media(max-width:1200px){
+
+.stats{
+
+    margin-top:-80px;
+
+    padding:0 25px 60px;
+
+}
+
+.stats-container{
+
+    gap:20px;
+
+}
+
+.stat-card{
+
+    padding:35px 20px;
+
+}
+
+.stat-card h2{
+
+    font-size:40px;
+
+}
+
+}
+
+/*=========================================
+            TABLET
+=========================================*/
+
+@media(max-width:992px){
+
+.stats{
+
+    margin-top:40px;
+
+    padding:0 20px 50px;
+
+}
+
+.stats-container{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+}
+
+/*=========================================
+            MOBILE
+=========================================*/
+
+@media(max-width:768px){
+
+.stats{
+
+    margin-top:30px;
+
+}
+
+.stats-container{
+
+    grid-template-columns:1fr;
+
+    gap:18px;
+
+}
+
+.stat-card{
+
+    padding:30px 20px;
+
+}
+
+.stat-icon{
+
+    width:75px;
+
+    height:75px;
+
+}
+
+.stat-icon svg{
+
+    width:35px;
+
+    height:35px;
+
+}
+
+.stat-card h2{
+
+    font-size:34px;
+
+}
+
+.stat-card p{
+
+    font-size:16px;
+
+}
+
+}
+
+/*=========================================
+          SMALL MOBILE
+=========================================*/
+
+@media(max-width:480px){
+
+.stats{
+
+    padding:0 15px 40px;
+
+}
+
+.stat-card{
+
+    padding:25px 18px;
+
+}
+
+.stat-card h2{
+
+    font-size:30px;
+
+}
+
+.stat-card p{
+
+    font-size:15px;
+
+}
+
+}
