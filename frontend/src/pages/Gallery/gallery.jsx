@@ -3,7 +3,7 @@ import Footer from "../../components/Footer/Footer";
 import "./gallery.css";
 import { useState } from "react"; 
 
-import heroImage from "../../assets/gallery/g-1.jpg";
+import heroImage from "../../assets/Gallery/g-1.jpg";
 
 import { FaIndustry } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa";

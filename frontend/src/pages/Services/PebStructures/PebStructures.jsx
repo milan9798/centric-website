@@ -19,10 +19,12 @@ import heroImage from "../../../assets/images/PebStructures/hero/bn-1.jpg";
 import aboutImg from "../../../assets/images/PebStructures/about/bn-2.jpg";
 
 
-import warehouseImg from "../../../assets/images/Pebstructures/solutions/pb-1.jpg";
-import factoryImg from "../../../assets/images/Pebstructures/solutions/pb-2.jpg";
-import logisticsImg from "../../../assets/images/Pebstructures/solutions/pb-3.jpg";
-import commercialImg from "../../../assets/images/Pebstructures/solutions/pb-4.jpg";
+import warehouseImg from "../../../assets/images/PebStructures/solutions/pb-1.jpg";
+import factoryImg from "../../../assets/images/PebStructures/solutions/pb-2.jpg";
+import logisticsImg from "../../../assets/images/PebStructures/solutions/pb-3.jpg";
+import commercialImg from "../../../assets/images/PebStructures/solutions/pb-4.jpg";
+
+
 import hangarImg from "../../../assets/images/Pebstructures/solutions/pb-5.jpg"; 
 import coldStorageImg from "../../../assets/images/Pebstructures/solutions/pb-6.jpg";
 
