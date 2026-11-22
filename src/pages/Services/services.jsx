@@ -30,10 +30,14 @@ import {
 
 import Navbar from "../../components/Navbar/navbar";
 import Footer from "../../components/Footer/Footer";
-import "./Services.css";
+
+
+import "./services.css";
 
 import heroImage from "../../assets/images/services/fa-1.AVIF";
-import fabrication from "../../assets/images/services/fa-6.Png";
+
+import fabrication from "../../assets/images/services/fa-6.png";
+
 import painting from "../../assets/images/services/shot-blasting.jpg";
 import engineering from "../../assets/images/services/fa-5.png";
 import management from "../../assets/images/services/pm.jpeg";
@@ -42,7 +46,9 @@ import management from "../../assets/images/services/pm.jpeg";
 import railwayImg from "../../assets/images/industries/Id-1.jpg";
 import metroImg from "../../assets/images/industries/Id-2.jpg";
 import powerImg from "../../assets/images/industries/Id-3.jpg";
-import industrialImg from "../../assets/images/industries/Id-4.jpg";
+
+import industrialImg from "../../assets/images/industries/id-4.jpg";
+
 import bridgeImg from "../../assets/images/industries/Id-5.jpg";
 import infraImg from "../../assets/images/industries/Id-6.jpg";
 

@@ -6,7 +6,9 @@ import { useState } from "react";
 import {useNavigate, useParams } from "react-router-dom";
 import Navbar from "../../components/Navbar/navbar";
 import Footer from "../../components/Footer/Footer";
-import "./ProjectDetails.css";
+
+
+import "./projectDetails.css";
 
 import project1 from "../../assets/images/Projects/featured/ft-1.jpg";
 import project2 from "../../assets/images/Projects/featured/ft-2.jpg";
