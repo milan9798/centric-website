@@ -1,0 +1,102 @@
+
+import "./Hero.css";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
+import hero1 from "../../assets/images/hero/hero-bg.jpg";
+import hero2 from "../../assets/images/hero/hero-bg1.jpg";
+import hero3 from "../../assets/images/hero/hero-bg2.jpg";
+import hero4 from "../../assets/images/hero/hero-bg3.jpg";
+import hero5 from "../../assets/images/hero/hero-bg4.jpg";
+
+function Hero() {
+  const navigate = useNavigate();
+
+  const slides = [
+    {
+      image: hero1,
+      title: "FABRICATING THE FUTURE OF INDIA",
+      desc: "Delivering innovative steel structures with unmatched quality, safety and reliability.",
+    },
+    {
+      image: hero2,
+      title: "BUILDING WORLD CLASS INFRASTRUCTURE",
+      desc: "Engineering excellence with modern steel fabrication solutions.",
+    },
+    {
+      image: hero3,
+      title: "TRUSTED STEEL SOLUTIONS",
+      desc: "Providing end-to-end fabrication services across multiple industries.",
+    },
+    {
+      image: hero4,
+      title: "LEADING STEEL FABRICATOR",
+      desc: "Committed to innovation, quality and customer satisfaction.",
+    },
+    {
+      image: hero5,
+      title: "STEEL STRUCTURES FOR TOMORROW",
+      desc: "Creating innovative and sustainable infrastructure across India.",
+    },
+  ];
+
+  const [current, setCurrent] = useState(0);
+  const [previous, setPrevious] = useState(0);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setPrevious(current);
+      setCurrent((current + 1) % slides.length);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, [current, slides.length]);
+
+  const titleParts = slides[current].title.split(" ");
+
+  return (
+    <section
+      className="hero"
+      style={{
+        backgroundImage: `url(${slides[previous].image})`,
+      }}
+    >
+      {/* Animated background image */}
+      <div
+        key={current}
+        className="hero-slide-image"
+        style={{
+          backgroundImage: `url(${slides[current].image})`,
+        }}
+        aria-hidden="true"
+      />
+
+      <div className="overlay">
+        <h4>LEADING STEEL FABRICATOR</h4>
+
+        <h1>
+          {titleParts.slice(0, -1).join(" ")}
+          <br />
+          <span>{titleParts[titleParts.length - 1]}</span>
+        </h1>
+
+        <p>{slides[current].desc}</p>
+
+        <div className="hero-btns">
+          <button
+            className="orange-btn"
+            onClick={() => navigate("/projects#featured-projects")}
+          >
+            Explore Projects
+          </button>
+
+          <button className="white-btn">
+            Get A Quote
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Hero;

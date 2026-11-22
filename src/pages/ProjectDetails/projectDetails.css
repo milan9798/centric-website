@@ -1,0 +1,290 @@
+.project-details {
+  padding: 120px 7% 80px;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+.project-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.project-container img {
+  width: 100%;
+  max-width: 850px;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+.project-container h1 {
+  margin-top: 30px;
+  font-size: 2.2rem;
+  color: #0b2c5f;
+  text-align: center;
+  font-weight: 700;
+}
+
+.project-container p {
+  margin-top: 18px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: center;
+}
+
+.project-img{
+  width:100%;
+  max-width:850px;
+  height:500px;
+  object-fit:cover;
+  border-radius:15px;
+}
+
+.view-image-btn{
+  text-align:center;
+  margin-top:25px;
+}
+
+.view-image-btn button{
+  background:#ff6b00;
+  color:#fff;
+  border:none;
+  padding:12px 30px;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.view-image-btn button:hover{
+  background:#e85d00;
+}
+
+.image-popup{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.9);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.popup-img{
+  max-width:90%;
+  max-height:90vh;
+  border-radius:12px;
+}
+
+.close-btn{
+  position:absolute;
+  top:20px;
+  right:30px;
+  width:45px;
+  height:45px;
+  border:none;
+  border-radius:50%;
+  background:#fff;
+  color:#000;
+  font-size:22px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.close-btn:hover{
+  background:red;
+  color:#fff;
+}
+
+
+.project-close-btn{
+  position: fixed;
+  top: 100px;
+  right: 35px;
+
+  width: 50px;
+  height: 50px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: white;
+  color: black;
+
+  font-size: 22px;
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,.3);
+
+  z-index: 9999;
+}
+
+.project-close-btn:hover{
+  background:#ff3b30;
+  color:white;
+}
+
+
+/* ==========================================
+            RESPONSIVE
+========================================== */
+
+/* Laptop */
+@media (max-width:1200px){
+
+  .project-details{
+    padding:110px 5% 70px;
+  }
+
+  .project-container{
+    max-width:900px;
+    padding:28px;
+  }
+
+  .project-container img,
+  .project-img{
+    height:430px;
+  }
+
+}
+
+/* Tablet */
+@media (max-width:992px){
+
+  .project-details{
+    padding:100px 4% 60px;
+  }
+
+  .project-container{
+    max-width:100%;
+    padding:24px;
+    border-radius:16px;
+  }
+
+  .project-container img,
+  .project-img{
+    max-width:100%;
+    height:380px;
+  }
+
+  .project-container h1{
+    font-size:2rem;
+  }
+
+  .project-container p{
+    font-size:1rem;
+    line-height:1.7;
+  }
+
+  .project-close-btn{
+    top:85px;
+    right:20px;
+    width:45px;
+    height:45px;
+    font-size:20px;
+  }
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+  .project-details{
+    padding:90px 20px 50px;
+  }
+
+  .project-container{
+    padding:18px;
+    border-radius:14px;
+  }
+
+  .project-container img,
+  .project-img{
+    height:260px;
+    border-radius:12px;
+  }
+
+  .project-container h1{
+    font-size:28px;
+    margin-top:22px;
+  }
+
+  .project-container p{
+    font-size:15px;
+    line-height:1.8;
+    text-align:left;
+  }
+
+  .view-image-btn button{
+    width:100%;
+    padding:14px;
+    font-size:15px;
+  }
+
+  .popup-img{
+    max-width:95%;
+    max-height:80vh;
+  }
+
+  .close-btn{
+    width:40px;
+    height:40px;
+    right:15px;
+    top:15px;
+    font-size:18px;
+  }
+
+  .project-close-btn{
+    top:80px;
+    right:15px;
+    width:42px;
+    height:42px;
+    font-size:18px;
+  }
+
+}
+
+/* Small Mobile */
+@media (max-width:480px){
+
+  .project-details{
+    padding:85px 15px 40px;
+  }
+
+  .project-container{
+    padding:15px;
+  }
+
+  .project-container img,
+  .project-img{
+    height:210px;
+  }
+
+  .project-container h1{
+    font-size:24px;
+  }
+
+  .project-container p{
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  .view-image-btn button{
+    font-size:14px;
+    padding:12px;
+  }
+
+  .project-close-btn{
+    width:38px;
+    height:38px;
+    font-size:16px;
+  }
+
+}
