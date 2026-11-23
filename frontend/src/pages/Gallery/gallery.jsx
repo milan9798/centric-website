@@ -1,7 +1,57 @@
+// import Navbar from "../../components/Navbar/navbar";
+// import Footer from "../../components/Footer/Footer";
+// import "./gallery.css";
+// import { useState } from "react"; 
+
+// import heroImage from "../../assets/Gallery/g-1.jpg";
+
+// import { FaIndustry } from "react-icons/fa";
+// import { FaUsers } from "react-icons/fa";
+// import { FaCalendarAlt } from "react-icons/fa";
+// import { FaShieldAlt } from "react-icons/fa";
+
+
+// // Bridges
+// import bridge1 from "../../assets/Gallery/bridges/ca-1.jpg";
+// import bridge2 from "../../assets/Gallery/bridges/ca-2.jpg";
+// import bridge3 from "../../assets/Gallery/bridges/ca-3.jpg";
+// import bridge4 from "../../assets/Gallery/bridges/ca-5.jpg";
+
+
+// // Metro
+// import metro5 from "../../assets/Gallery/metro/mt-1.jpg";
+// import metro6 from "../../assets/Gallery/metro/mt-2.jpg";
+// import metro7 from "../../assets/Gallery/metro/mt-3.jpg";
+// import metro8 from "../../assets/Gallery/metro/mt-4.jpg";
+
+// // Steel Fabrication
+// import steel9 from "../../assets/Gallery/steelfabrication/tt-1.jpg";
+// import steel10 from "../../assets/Gallery/steelfabrication/tt-2.jpg";
+// import steel11 from "../../assets/Gallery/steelfabrication/tt-3.jpg";
+// import steel12 from "../../assets/Gallery/steelfabrication/tt-4.jpg";
+
+
+// // Painting
+// import paint13 from "../../assets/Gallery/painting/p-1.jpg";
+// import paint14 from "../../assets/Gallery/painting/ft-3.jpg";
+// import paint15 from "../../assets/Gallery/painting/p-2.jpg";
+// import paint16 from "../../assets/Gallery/painting/p-3.jpg";
+
+// // Industrial
+
+// import industrial17 from "../../assets/Gallery/industrial/i-1.jpg";
+// import industrial18 from "../../assets/Gallery/industrial/i-2.jpg";
+// import industrial19 from "../../assets/Gallery/industrial/r-3.jpg";
+// import industrial20 from "../../assets/Gallery/industrial/r-4.jpg";
+
+
+
+
+
 import Navbar from "../../components/Navbar/navbar";
 import Footer from "../../components/Footer/Footer";
 import "./gallery.css";
-import { useState } from "react"; 
+import { useState } from "react";
 
 import heroImage from "../../assets/Gallery/g-1.jpg";
 
@@ -10,13 +60,11 @@ import { FaUsers } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaShieldAlt } from "react-icons/fa";
 
-
 // Bridges
 import bridge1 from "../../assets/Gallery/bridges/ca-1.jpg";
 import bridge2 from "../../assets/Gallery/bridges/ca-2.jpg";
 import bridge3 from "../../assets/Gallery/bridges/ca-3.jpg";
 import bridge4 from "../../assets/Gallery/bridges/ca-5.jpg";
-
 
 // Metro
 import metro5 from "../../assets/Gallery/metro/mt-1.jpg";
@@ -30,7 +78,6 @@ import steel10 from "../../assets/Gallery/steelfabrication/tt-2.jpg";
 import steel11 from "../../assets/Gallery/steelfabrication/tt-3.jpg";
 import steel12 from "../../assets/Gallery/steelfabrication/tt-4.jpg";
 
-
 // Painting
 import paint13 from "../../assets/Gallery/painting/p-1.jpg";
 import paint14 from "../../assets/Gallery/painting/ft-3.jpg";
@@ -42,6 +89,12 @@ import industrial17 from "../../assets/Gallery/industrial/i-1.jpg";
 import industrial18 from "../../assets/Gallery/industrial/i-2.jpg";
 import industrial19 from "../../assets/Gallery/industrial/r-3.jpg";
 import industrial20 from "../../assets/Gallery/industrial/r-4.jpg";
+
+
+
+
+
+
 
 
 const Gallery = () => {

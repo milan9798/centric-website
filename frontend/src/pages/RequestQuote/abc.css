@@ -1,9 +1,13 @@
+
+
 .quoteHero{
     position:relative;
     min-height:75vh;
     display:flex;
     align-items:center;
-    background:url("../../assets/images/request-quote/hero.jpg") center/cover no-repeat;
+   
+    background:url("../../assets/images/RdsoBridgesMetro/ft-1.jpg") center/cover no-repeat;
+
 }
 
 .quoteOverlay{
@@ -440,7 +444,9 @@ text-align:center;
 
     position:relative;
     padding:120px 8%;
-    background:url("../../assets/images/request-quote/cta-bg.jpg") center/cover no-repeat;
+
+   background:url("../../assets/images/RdsoBridgesMetro/ft-1.jpg") center/cover no-repeat;
+
     overflow:hidden;
 
 }
@@ -790,7 +796,9 @@ width:100%;
     padding:20px;
 }
 
+
 .officeCard{
+
     padding:30px 20px;
 }
 
