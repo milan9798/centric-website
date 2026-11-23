@@ -1,21 +1,25 @@
+
+
 import "./Footer.css";
 import logo1 from "../../assets/images/ct-logo.jpg";
-// import logo2 from "../../assets/images/Ce-logo.jpg";
 
-// import logo from "../../assets/logos/ind.png";
+
+
 
 import { FaInstagram, FaLinkedin,FaFacebookF} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function Footer() {
   return (
+
+    
     <footer className="footer">
       <div className="footer-container">
 
         {/* Logo Section */}
         <div className="footer-logo">
           <img src={logo1} alt="Centrique Infratech" />
-           {/* <img src={logo2} alt="second logo" /> */}
+           
 
           <h3>Centrique Infratech Pvt. Ltd</h3>
           <p>

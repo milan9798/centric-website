@@ -1,268 +1,161 @@
-// // import "./Owner.css";
-// // import ownerImg from "../../assets/images/owner.png";
-
-// // function Owner() {
-// //   return (
-// //     <section className="owner">
-
-// //       <div className="owner-left">
-
-// //         <p className="owner-subtitle">
-// //           MESSAGE FROM
-// //         </p>
-
-// //         <h2>
-// //           Managing Director
-// //         </h2>
-
-// //         <p>
-// //           Welcome to Centrique Infratech Pvt. Ltd.
-// //           For over 15 years, we have been committed to delivering
-// //           high-quality steel fabrication and infrastructure
-// //           solutions across India.
-// //         </p>
-
-// //         <p>
-// //           Our mission is to provide innovative engineering
-// //           solutions with quality, safety and customer
-// //           satisfaction as our highest priorities.
-// //         </p>
-
-// //         <h3>
-// //           Mr. Milan Kalaria
-// //         </h3>
-
-// //         <span>Managing Director</span>
-
-// //       </div>
-
-// //       <div className="owner-right">
-
-// //         <div className="owner-image">
-// //           <img src={ownerImg} alt="Managing Director" />
-// //         </div>
-
-// //       </div>
-
-// //     </section>
-// //   );
-// // }
-
-// // export default Owner;
-
 
 
 // import "./Owner.css";
-// import ownerImg from "../../assets/images/owner.png";
 
-// function Owner() {
-//   return (
-//     <section className="owner">
-
-//       {/* Left Side */}
-//       <div className="owner-left">
-
-//         <p className="owner-subtitle">
-//           MESSAGE FROM
-//         </p>
-
-//         <h2>
-//           Managing Director
-//         </h2>
-
-//         <p>
-//           Welcome to Centrique Infratech Pvt. Ltd. For over 15 years, we have
-//           been committed to delivering high-quality steel fabrication and
-//           infrastructure solutions across India.
-//         </p>
-
-//         <p>
-//           Our mission is to provide innovative engineering solutions with
-//           quality, safety and customer satisfaction as our highest priorities.
-//         </p>
-
-//         <h3>
-//           Mr. Milan Kalaria
-//         </h3>
-
-//         <span>Managing Director</span>
-
-//       </div>
-
-//       {/* Right Side */}
-//       <div className="owner-right">
-
-//         {/* Image */}
-//         <div className="owner-image">
-//           <img src={ownerImg} alt="Managing Director" />
-//         </div>
-
-//         {/* Feature Cards */}
-//         <div className="owner-features">
-
-//           <div className="feature-card">
-//             <div className="feature-icon">✔</div>
-
-//             <div>
-//               <h4>Quality Assured</h4>
-//               <p>
-//                 World-class steel fabrication with international standards.
-//               </p>
-//             </div>
-//           </div>
-
-//           <div className="feature-card">
-//             <div className="feature-icon">👷</div>
-
-//             <div>
-//               <h4>Experienced Team</h4>
-//               <p>
-//                 Professional engineers using modern technology.
-//               </p>
-//             </div>
-//           </div>
-
-//           <div className="feature-card">
-//             <div className="feature-icon">⭐</div>
-
-//             <div>
-//               <h4>Customer Focused</h4>
-//               <p>
-//                 Delivering quality work with complete customer satisfaction.
-//               </p>
-//             </div>
-//           </div>
-
-//         </div>
-
-//       </div>
-
-//     </section>
-//   );
-// }
-
-// export default Owner;
-
-
-
-
-
-// import "./Owner.css";
-// import ownerImg from "../../assets/images/owner.png";
-
+// import { FaArrowRight } from "react-icons/fa";
 // import {
-//   FaAward,
-//   FaUsers,
-//   FaHandshake,
+//   FaCertificate,
+//   FaShieldAlt,
+//   FaHardHat,
+//   FaIndustry,
 // } from "react-icons/fa";
 
+// import ownerImg from "../../assets/images/bn-1.jpg";
+
 // function Owner() {
 //   return (
 //     <section className="owner">
 
-//       {/* Left */}
-//       <div className="owner-left">
+//       <div className="owner-container">
 
-//         <p className="owner-subtitle">MESSAGE FROM</p>
+//         {/* LEFT CONTENT */}
 
-//         <h2>Managing Director</h2>
+//         <div className="owner-left">
 
-//         <div className="owner-line"></div>
+//           <span className="owner-tag">
+//             WHY CHOOSE CENTRIQUE
+//           </span>
 
-//         <p>
-//           Welcome to Centrique Infratech Pvt. Ltd. For over 15 years,
-//           we have been committed to delivering high-quality steel
-//           fabrication and infrastructure solutions across India.
-//         </p>
+//           <h2>
+//             Engineering Excellence
+//             <br />
+//             <span>Built For Tomorrow.</span>
+//           </h2>
 
-//         <p>
-//           Our mission is to provide innovative engineering solutions
-//           with quality, safety and customer satisfaction as our
-//           highest priorities.
-//         </p>
+//           <p>
+//             Centrique Infratech is one of India's leading steel fabrication
+//             companies delivering world-class bridge structures,
+//             industrial projects and infrastructure solutions with
+//             unmatched quality, innovation and engineering excellence.
+//           </p>
 
-//         <h3>Mr. Meet Sir</h3>
+//           <div className="owner-points">
 
-//         <span>Managing Director</span>
+//             <div className="point">
+
+//               <FaCertificate />
+
+//               <span>ISO Certified Company</span>
+
+//             </div>
+
+//             <div className="point">
+
+//               <FaShieldAlt />
+
+//               <span>100% Safety Standards</span>
+
+//             </div>
+
+//             <div className="point">
+
+//               <FaIndustry />
+
+//               <span>Advanced Steel Fabrication</span>
+
+//             </div>
+
+//             <div className="point">
+
+//               <FaHardHat />
+
+//               <span>Experienced Engineering Team</span>
+
+//             </div>
+
+//           </div>
+
+//           <button className="owner-btn">
+
+//             Explore Projects
+
+//             <FaArrowRight />
+
+//           </button>
+
+//         </div>
+
+//         {/* RIGHT IMAGE */}
+
+//         <div className="owner-right">
+
+//           <img
+//             src={ownerImg}
+//             alt="Centrique"
+//             className="owner-image"
+//           />
+
+//           {/* Floating Card */}
+
+//           <div className="experience-card">
+
+//             <h2>15+</h2>
+
+//             <span>Years Experience</span>
+
+//           </div>
+
+//           {/* Floating Card */}
+
+//           <div className="iso-card">
+
+//             <FaCertificate />
+
+//             <div>
+
+//               <h4>ISO Certified</h4>
+
+//               <p>International Standards</p>
+
+//             </div>
+
+//           </div>
+
+//         </div>
 
 //       </div>
 
-//       {/* Center Image */}
+//       {/* Bottom Cards */}
 
-//    {/* Center Image */}
+//       <div className="owner-bottom">
 
-// <div className="owner-center">
+//         <div className="owner-box">
 
-//     <div className="owner-image">
-//         <img src={ownerImg} alt="Managing Director" />
-//     </div>
+//           <FaIndustry />
 
-// </div>
+//           <h3>100+</h3>
 
-//       {/* Right Cards */}
-
-//       <div className="owner-right">
-
-//         <div className="feature-card">
-
-//           <div className="feature-icon">
-//             <FaAward />
-//           </div>
-
-//           <div>
-
-//             <h4>Quality Assured</h4>
-
-//             <div className="feature-line"></div>
-
-//             <p>
-//               World-class steel fabrication with strict quality control
-//               and International Standards.
-//             </p>
-
-//           </div>
+//           <p>Projects Delivered</p>
 
 //         </div>
 
-//         <div className="feature-card">
+//         <div className="owner-box">
 
-//           <div className="feature-icon">
-//             <FaUsers />
-//           </div>
+//           <FaShieldAlt />
 
-//           <div>
+//           <h3>100%</h3>
 
-//             <h4>Experienced Team</h4>
-
-//             <div className="feature-line"></div>
-
-//             <p>
-//               Professional engineers and skilled workforce with rich
-//               industry experience.
-//             </p>
-
-//           </div>
+//           <p>Safety Commitment</p>
 
 //         </div>
 
-//         <div className="feature-card">
+//         <div className="owner-box">
 
-//           <div className="feature-icon">
-//             <FaHandshake />
-//           </div>
+//           <FaHardHat />
 
-//           <div>
+//           <h3>24×7</h3>
 
-//             <h4>Customer Focused</h4>
-
-//             <div className="feature-line"></div>
-
-//             <p>
-//               Committed to delivering the best quality and ensuring
-//               complete customer satisfaction.
-//             </p>
-
-//           </div>
+//           <p>Technical Support</p>
 
 //         </div>
 
@@ -271,18 +164,24 @@
 //     </section>
 //   );
 // }
+// export default Owner;   
+          
 
-// export default Owner;
-
-
-
-
+       
 
 
-  import "./Owner.css";
 
-import { FaArrowRight } from "react-icons/fa";
+
+
+
+
+
+
+
+import "./Owner.css";
+
 import {
+  FaArrowRight,
   FaCertificate,
   FaShieldAlt,
   FaHardHat,
@@ -293,25 +192,22 @@ import ownerImg from "../../assets/images/bn-1.jpg";
 
 function Owner() {
   return (
-    <section className="owner">
-
+    <section className="owner" aria-labelledby="owner-heading">
       <div className="owner-container">
 
         {/* LEFT CONTENT */}
-
         <div className="owner-left">
-
           <span className="owner-tag">
             WHY CHOOSE CENTRIQUE
           </span>
 
-          <h2>
+          <h2 id="owner-heading">
             Engineering Excellence
             <br />
             <span>Built For Tomorrow.</span>
           </h2>
 
-          <p>
+          <p className="owner-description">
             Centrique Infratech is one of India's leading steel fabrication
             companies delivering world-class bridge structures,
             industrial projects and infrastructure solutions with
@@ -319,131 +215,88 @@ function Owner() {
           </p>
 
           <div className="owner-points">
-
             <div className="point">
-
-              <FaCertificate />
-
+              <FaCertificate aria-hidden="true" />
               <span>ISO Certified Company</span>
-
             </div>
 
             <div className="point">
-
-              <FaShieldAlt />
-
+              <FaShieldAlt aria-hidden="true" />
               <span>100% Safety Standards</span>
-
             </div>
 
             <div className="point">
-
-              <FaIndustry />
-
+              <FaIndustry aria-hidden="true" />
               <span>Advanced Steel Fabrication</span>
-
             </div>
 
             <div className="point">
-
-              <FaHardHat />
-
+              <FaHardHat aria-hidden="true" />
               <span>Experienced Engineering Team</span>
-
             </div>
-
           </div>
 
-          <button className="owner-btn">
-
-            Explore Projects
-
-            <FaArrowRight />
-
-          </button>
-
+          <a
+            href="/projects"
+            className="owner-btn"
+            aria-label="Explore Centrique projects"
+          >
+            <span>Explore Projects</span>
+            <FaArrowRight aria-hidden="true" />
+          </a>
         </div>
 
         {/* RIGHT IMAGE */}
-
         <div className="owner-right">
-
-          <img
-            src={ownerImg}
-            alt="Centrique"
-            className="owner-image"
-          />
-
-          {/* Floating Card */}
-
-          <div className="experience-card">
-
-            <h2>15+</h2>
-
-            <span>Years Experience</span>
-
+          <div className="owner-image-wrapper">
+            <img
+              src={ownerImg}
+              alt="Centrique steel fabrication and infrastructure work"
+              className="owner-image"
+              loading="lazy"
+            />
           </div>
 
-          {/* Floating Card */}
+          {/* EXPERIENCE CARD */}
+          <div className="experience-card">
+            <h3>15+</h3>
+            <span>Years Experience</span>
+          </div>
 
+          {/* ISO CARD */}
           <div className="iso-card">
-
-            <FaCertificate />
+            <FaCertificate aria-hidden="true" />
 
             <div>
-
               <h4>ISO Certified</h4>
-
               <p>International Standards</p>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
 
-      {/* Bottom Cards */}
-
+      {/* BOTTOM CARDS */}
       <div className="owner-bottom">
-
         <div className="owner-box">
-
-          <FaIndustry />
-
+          <FaIndustry aria-hidden="true" />
           <h3>100+</h3>
-
           <p>Projects Delivered</p>
-
         </div>
 
         <div className="owner-box">
-
-          <FaShieldAlt />
-
+          <FaShieldAlt aria-hidden="true" />
           <h3>100%</h3>
-
           <p>Safety Commitment</p>
-
         </div>
 
         <div className="owner-box">
-
-          <FaHardHat />
-
+          <FaHardHat aria-hidden="true" />
           <h3>24×7</h3>
-
           <p>Technical Support</p>
-
         </div>
-
       </div>
-
     </section>
   );
 }
-export default Owner;   
-          
 
-       
+export default Owner;    

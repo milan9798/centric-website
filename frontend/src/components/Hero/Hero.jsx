@@ -1,38 +1,4 @@
-// import "./Hero.css";
-// import heroBg from "../../assets/images/hero/hero-bg.jpg";
-
-
-// function Hero() {
-//   return (
-//     <section
-//       className="hero"
-//       style={{ backgroundImage: `url(${heroBg})` }}
-//     >
-//       <div className="overlay">
-//         <h4>LEADING STEEL FABRICATOR</h4>
-
-//         <h1>
-//           FABRICATING <br />
-//           THE FUTURE OF <span>INDIA</span>
-//         </h1>
-
-//         <p>
-//           Delivering innovative steel structures with unmatched quality,
-//           safety and reliability.
-//         </p>
-
-//         <div className="hero-btns">
-//           <button className="orange-btn">Explore Projects</button>
-//           <button className="white-btn">Get A Quote</button>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default Hero;     
-
-
+     
 
 import "./Hero.css";
 import { useState, useEffect  } from "react";

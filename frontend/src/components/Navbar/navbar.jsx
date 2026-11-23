@@ -1,396 +1,388 @@
+
+//  ye shi code hai brother smjh gye na bhai isko mere ko comment kr rha hu bhai smjh gye na bhai 
+
+
+
+
+
+
+
+
 import "./Navbar.css";
+
 import logo1 from "../../assets/images/ct-logo.jpg";
 import logo2 from "../../assets/images/Ce-logo.jpg";
 
-import { Link } from "react-router-dom";
-
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
 
 import {
   FaInstagram,
   FaLinkedin,
-    FaFacebookF,
+  FaFacebookF,
   FaSearch,
   FaBars,
   FaTimes,
 } from "react-icons/fa";
 
-
 function Navbar() {
-  
+  const navigate = useNavigate();
+  const searchRef = useRef(null);
 
-const navigate = useNavigate();
+  const [showSearch, setShowSearch] = useState(false);
+  const [search, setSearch] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
 
-const [showSearch, setShowSearch] = useState(false);
-const [search, setSearch] = useState("");
-const [menuOpen, setMenuOpen] = useState(false)
-;
-const [servicesOpen, setServicesOpen] = useState(false);
-const [aboutOpen, setAboutOpen] = useState(false);
+  const searchItems = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "About Us", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Projects", path: "/projects" },
+    { name: "Career", path: "/career" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Certificates", path: "/certificates" },
+    { name: "Contact", path: "/contact" },
+    { name: "Leadership", path: "/leadership" },
+    { name: "Our Message", path: "/message" },
+    { name: "Core Values", path: "/values" },
+    { name: "RDSO Bridges Metro", path: "/rdso-bridges-metro" },
+    { name: "PEB Structures", path: "/peb-structures" },
+    { name: "Global Presence", path: "/global-presence" },
+    { name: "Request Quote", path: "/request-quote" },
+    { name: "FAQ", path: "/faq" },
+    { name: "Privacy Policy", path: "/privacy-policy" },
+  ];
 
-const searchItems = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Services", path: "/services" },
-  { name: "Projects", path: "/projects" },
-  { name: "Career", path: "/career" },
-  { name: "Gallery", path: "/gallery" },
-  { name: "Certificates", path: "/certificates" },
-  { name: "Contact", path: "/contact" },
-];
+  // Close menu and reset dropdown states
+  const closeMobileMenu = () => {
+    setMenuOpen(false);
+    setAboutOpen(false);
+    setServicesOpen(false);
+  };
 
-const handleSearch = (e) => {
-
-  if (e.key !== "Enter") return;
-
-  const page = searchItems.find((item) =>
-    item.name.toLowerCase() === search.toLowerCase().trim()
-  );
-
-  if (page) {
-
-    navigate(page.path);
-
-    setSearch("");
-
+  // Close search
+  const closeSearch = () => {
     setShowSearch(false);
+    setSearch("");
+  };
 
-  } else {
+  // Search page
+  const handleSearch = (e) => {
+    e.preventDefault();
 
-    alert("Page Not Found");
+    const query = search.trim().toLowerCase();
 
-  }
+    if (!query) {
+      return;
+    }
 
-};
+    const page = searchItems.find(
+      (item) => item.name.toLowerCase() === query
+    );
 
+    if (page) {
+      navigate(page.path);
+      closeSearch();
+      closeMobileMenu();
+    } else {
+      alert("Page not found. Please enter a valid page name.");
+    }
+  };
+
+  // Focus input when search opens
+  useEffect(() => {
+    if (showSearch) {
+      searchRef.current?.focus();
+    }
+  }, [showSearch]);
+
+  // Close search and mobile menu on Escape
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === "Escape") {
+        closeSearch();
+        closeMobileMenu();
+      }
+    };
+
+    document.addEventListener("keydown", handleEscape);
+
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, []);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
+  // Reset dropdowns when mobile menu closes
+  useEffect(() => {
+    if (!menuOpen) {
+      setAboutOpen(false);
+      setServicesOpen(false);
+    }
+  }, [menuOpen]);
 
   return (
     <header className="navbar">
-     
-   <div className="logo">
-<Link to="/">
-  <img
-    src={logo1}
-    alt="HM Centric Engineering Logo"
-    className="logo-one"
-  />
-</Link>
+      {/* Logos */}
+      <div className="logo">
+        <Link to="/" onClick={closeMobileMenu} aria-label="Home">
+          <img
+            src={logo1}
+            alt="Centrique Infratech Logo"
+            className="logo-one"
+          />
+        </Link>
 
-  <div className="logo-divider"></div>
-<Link to="/">
-  <img
-    src={logo2}
-    alt="Second Logo" 
-    className="logo-two"
-  />
-  </Link>
+        <div className="logo-divider" />
 
-</div>
+        <Link to="/" onClick={closeMobileMenu} aria-label="Home">
+          <img
+            src={logo2}
+            alt="Centrique Logo"
+            className="logo-two"
+          />
+        </Link>
+      </div>
 
-      <nav>
+      {/* Desktop Navigation */}
+      <nav className="desktop-nav" aria-label="Main navigation">
         <ul className="nav-links">
-
-          {/* Home */}
           <li>
             <Link to="/">Home</Link>
           </li>
 
-          {/* About Dropdown */}
+          {/* About dropdown */}
           <li className="dropdown">
             <Link to="/about">
-              About Us <span className="arrow">v</span>
+              About Us <span className="arrow">▼</span>
             </Link>
 
             <ul className="dropdown-menu">
               <li>
-                <Link to="/leadership">LEADERSHIP</Link>
+                <Link to="/leadership">Leadership</Link>
               </li>
-
               <li>
-                <Link to="/message">OUR MESSAGE</Link>
+                <Link to="/message">Our Message</Link>
               </li>
-
               <li>
-                <Link to="/values">CORE VALUES</Link>
+                <Link to="/values">Core Values</Link>
               </li>
             </ul>
           </li>
 
-          {/* Services Dropdown */}
+          {/* Services dropdown */}
           <li className="dropdown">
             <Link to="/services">
-              Services <span className="arrow">v</span>
+              Services <span className="arrow">▼</span>
             </Link>
 
             <ul className="dropdown-menu">
               <li>
                 <Link to="/rdso-bridges-metro">
-                  RDSO BRIDGES <br />
-                  & METRO
+                  RDSO Bridges &amp; Metro
                 </Link>
               </li>
-
               <li>
-                <Link to="/peb-structures">
-                  PEB STRUCTURES
-                </Link>
+                <Link to="/peb-structures">PEB Structures</Link>
               </li>
             </ul>
           </li>
 
-          {/* Projects */}
           <li>
             <Link to="/projects">Projects</Link>
           </li>
-
-          {/* Career */}
           <li>
             <Link to="/career">Career</Link>
           </li>
-
-          {/* Gallery */}
           <li>
             <Link to="/gallery">Gallery</Link>
           </li>
-
-          {/* Certificates */}
           <li>
             <Link to="/certificates">Certificates</Link>
           </li>
-
-          {/* Contact */}
           <li>
             <Link to="/contact">Contact</Link>
           </li>
-
         </ul>
       </nav>
 
-      {/* <button className="quote-btn">
-        Get A Quote
-      </button> */}
-
-    <div className="social-icons">
-
-  {/* Instagram */}
-  <a
-    href="https://www.instagram.com/centrique.infratech/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Instagram"
-  >
-    <FaInstagram />
-  </a>
-
-  {/* LinkedIn */}
-  <a
-    href="https://www.linkedin.com/company/centrique-infratech-pvt-ltd"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="LinkedIn"
-  >
-    <FaLinkedin />
-  </a>
-
-  {/* facebook  */}
-
-   <a
-  href="https://www.facebook.com/your-page-name"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <FaFacebookF />
-</a>
-
-  {/* Search Icon */}
-  <div
-    className="search-icon"
-    onClick={() => setShowSearch(!showSearch)}
-  >
-    <FaSearch />
-  </div>
-
-  {/* Hamburger Menu */}
-  <div
-    className="menu-toggle"
-    onClick={() => setMenuOpen(!menuOpen)}
-  >
-    {menuOpen ? <FaTimes /> : <FaBars />}
-  </div>
-
-</div>
-
-{/* Search Box */}
-
-{showSearch && (
-  <div className="search-box">
-    <input
-      type="text"
-      placeholder="Search..."
-      value={search}
-      onChange={(e) => setSearch(e.target.value)}
-      onKeyDown={handleSearch}
-    />
-  </div>
-)}
-
-{/* Mobile Menu */}
-
-{/* {menuOpen && (
-  <div className="mobile-menu">
-
-    <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-
-    <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
-
-    <Link to="/services" onClick={() => setMenuOpen(false)}>Services</Link>
-
-    <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
-
-    <Link to="/career" onClick={() => setMenuOpen(false)}>Career</Link>
-
-    <Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link>
-
-    <Link to="/certificates" onClick={() => setMenuOpen(false)}>Certificates</Link>
-
-    <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
-
-  </div>
-)} */}
-
-
-{menuOpen && (
-  <div className="mobile-menu">
-
-    <Link to="/" onClick={() => setMenuOpen(false)}>
-      Home
-    </Link>
-
-    {/* ABOUT */}
-    {/* <div className="mobile-dropdown">
-
-      <div
-        className="mobile-dropdown-title"
-        onClick={() => setAboutOpen(!aboutOpen)}
-      >
-        About Us {aboutOpen ? "▲" : "▼"}
-      </div>  */}
-
-
-      <div className="mobile-dropdown">
-
-  <div className="mobile-dropdown-title">
-
-    <Link 
-      to="/about"
-      onClick={() => setMenuOpen(false)}
-    >
-      About Us
-    </Link>
-
-    <span 
-      onClick={() => setAboutOpen(!aboutOpen)}
-    >
-      {aboutOpen ? "▲" : "▼"}
-    </span>
-
-  </div>
-
-      {aboutOpen && (
-        <div className="mobile-submenu">
-          <Link to="/leadership" onClick={() => setMenuOpen(false)}>
-            Leadership
-          </Link>
-
-          <Link to="/message" onClick={() => setMenuOpen(false)}>
-            Our Message
-          </Link>
-
-          <Link to="/values" onClick={() => setMenuOpen(false)}>
-            Core Values
-          </Link>
-        </div>
-      )}
-    </div>
-
-    {/* SERVICES */}
-    {/* <div className="mobile-dropdown">
-
-      <div
-        className="mobile-dropdown-title"
-        onClick={() => setServicesOpen(!servicesOpen)}
-      >
-        Services {servicesOpen ? "▲" : "▼"}
-      </div> */}
-
-
-      <div className="mobile-dropdown">
-
-  <div className="mobile-dropdown-title">
-
-    <Link 
-      to="/services"
-      onClick={() => setMenuOpen(false)}
-    >
-      Services
-    </Link>
-
-    <span 
-      onClick={() => setServicesOpen(!servicesOpen)}
-    >
-      {servicesOpen ? "▲" : "▼"}
-    </span>
-
-  </div>  
-
-      
-
-      {servicesOpen && (
-        <div className="mobile-submenu">
-
-          <Link
-            to="/rdso-bridges-metro"
-            onClick={() => setMenuOpen(false)}
+      {/* Right Actions */}
+      <div className="navbar-actions">
+        <div className="navbar-social-icons">
+          <a
+            href="https://www.instagram.com/centrique.infratech/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
           >
-            RDSO Bridges & Metro
-          </Link>
+            <FaInstagram />
+          </a>
 
-          <Link
-            to="/peb-structures"
-            onClick={() => setMenuOpen(false)}
+          <a
+            href="https://www.linkedin.com/company/centrique-infratech-pvt-ltd"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
           >
-            PEB Structures
+            <FaLinkedin />
+          </a>
+
+          <a
+            href="https://www.facebook.com/your-page-name"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <FaFacebookF />
+          </a>
+        </div>
+
+        {/* Search toggle */}
+        <button
+          type="button"
+          className="search-icon"
+          aria-label={showSearch ? "Close search" : "Open search"}
+          aria-expanded={showSearch}
+          onClick={() => {
+            setShowSearch((prev) => !prev);
+            setSearch("");
+          }}
+        >
+          {showSearch ? <FaTimes /> : <FaSearch />}
+        </button>
+
+        {/* Mobile menu toggle */}
+        <button
+          type="button"
+          className="menu-toggle"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          onClick={() => {
+            setMenuOpen((prev) => !prev);
+            closeSearch();
+          }}
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
+
+      {/* Search Form */}
+      {showSearch && (
+        <form className="search-box" onSubmit={handleSearch}>
+          <input
+            ref={searchRef}
+            type="search"
+            placeholder="Search pages (e.g. Projects)"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            aria-label="Search website pages"
+          />
+
+          <button type="submit" aria-label="Submit search">
+            <FaSearch />
+          </button>
+        </form>
+      )}
+
+      {/* Mobile Navigation */}
+      {menuOpen && (
+        <nav className="mobile-menu" aria-label="Mobile navigation">
+          <Link to="/" onClick={closeMobileMenu}>
+            Home
           </Link>
 
-        </div>
+          {/* About */}
+          <div className="mobile-dropdown">
+            <div className="mobile-dropdown-title">
+              <Link to="/about" onClick={closeMobileMenu}>
+                About Us
+              </Link>
+
+              <button
+                type="button"
+                aria-label="Toggle About submenu"
+                aria-expanded={aboutOpen}
+                onClick={() => setAboutOpen((prev) => !prev)}
+              >
+                {aboutOpen ? "▲" : "▼"}
+              </button>
+            </div>
+
+            {aboutOpen && (
+              <div className="mobile-submenu">
+                <Link to="/leadership" onClick={closeMobileMenu}>
+                  Leadership
+                </Link>
+                <Link to="/message" onClick={closeMobileMenu}>
+                  Our Message
+                </Link>
+                <Link to="/values" onClick={closeMobileMenu}>
+                  Core Values
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* Services */}
+          <div className="mobile-dropdown">
+            <div className="mobile-dropdown-title">
+              <Link to="/services" onClick={closeMobileMenu}>
+                Services
+              </Link>
+
+              <button
+                type="button"
+                aria-label="Toggle Services submenu"
+                aria-expanded={servicesOpen}
+                onClick={() => setServicesOpen((prev) => !prev)}
+              >
+                {servicesOpen ? "▲" : "▼"}
+              </button>
+            </div>
+
+            {servicesOpen && (
+              <div className="mobile-submenu">
+                <Link
+                  to="/rdso-bridges-metro"
+                  onClick={closeMobileMenu}
+                >
+                  RDSO Bridges &amp; Metro
+                </Link>
+                <Link to="/peb-structures" onClick={closeMobileMenu}>
+                  PEB Structures
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <Link to="/projects" onClick={closeMobileMenu}>
+            Projects
+          </Link>
+          <Link to="/career" onClick={closeMobileMenu}>
+            Career
+          </Link>
+          <Link to="/gallery" onClick={closeMobileMenu}>
+            Gallery
+          </Link>
+          <Link to="/certificates" onClick={closeMobileMenu}>
+            Certificates
+          </Link>
+          <Link to="/contact" onClick={closeMobileMenu}>
+            Contact
+          </Link>
+        </nav>
       )}
-    </div>
-
-    <Link to="/projects" onClick={() => setMenuOpen(false)}>
-      Projects
-    </Link>
-
-    <Link to="/career" onClick={() => setMenuOpen(false)}>
-      Career
-    </Link>
-
-    <Link to="/gallery" onClick={() => setMenuOpen(false)}>
-      Gallery
-    </Link>
-
-    <Link to="/certificates" onClick={() => setMenuOpen(false)}>
-      Certificates
-    </Link>
-
-    <Link to="/contact" onClick={() => setMenuOpen(false)}>
-      Contact
-    </Link>
-
-  </div>
-)}
-       
-    
     </header>
   );
 }

@@ -1,6 +1,7 @@
 /*=========================================
       CERTIFICATE SHOWCASE
 =========================================*/
+/* 
 .certificate-showcase{
 
     width:100%;
@@ -64,12 +65,12 @@
 
     line-height:1.8;
 
-}
+} */
 
 
 /*========================*/
 
-.certificate-card{
+/* .certificate-card{
 
     max-width:1200px;
 
@@ -101,12 +102,12 @@
 
     transform:translateY(-10px);
 
-}
+} */
 
 
 /*========================*/
 
-.certificate-image{
+/* .certificate-image{
 
     background:#fff;
 
@@ -138,12 +139,12 @@
 
     transform:scale(1.04);
 
-}
+} */
 
 
 /*========================*/
 
-.certificate-content{
+/* .certificate-content{
 
     padding:60px 60px 60px 0;
 
@@ -197,12 +198,12 @@
 
     font-size:17px;
 
-}
+} */
 
 
 /*========================*/
 
-.certificate-buttons{
+/* .certificate-buttons{
 
     display:flex;
 
@@ -262,11 +263,11 @@
 
     background:#d85b00;
 
-}
+} */
 
 
 /*========================*/
-
+/* 
 @media(max-width:991px){
 
 .certificate-card{
@@ -289,12 +290,12 @@ justify-content:center;
 
 }
 
-}
+} */
 
 
 /* light box  */
 
-.certificate-lightbox{
+/* .certificate-lightbox{
 
     position:fixed;
 
@@ -374,12 +375,12 @@ justify-content:center;
 
     color:#fff;
 
-}
+} */
 
 
 /* certificate model  */
 
-.certificate-modal{
+/* .certificate-modal{
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.85);
@@ -415,7 +416,7 @@ justify-content:center;
   color: #fff;
   font-size: 22px;
   cursor: pointer;
-}
+} */
 
 
 
@@ -424,7 +425,7 @@ justify-content:center;
       WHY CERTIFICATIONS MATTER
 =========================================*/
 
-.cert-benefits{
+/* .cert-benefits{
 
     width:100%;
 
@@ -588,13 +589,13 @@ justify-content:center;
 
     font-size:16px;
 
-}
+} */
 
 /*=========================
       Responsive
 =========================*/
 
-@media(max-width:1100px){
+/* @media(max-width:1100px){
 
 .benefits-grid{
 
@@ -618,14 +619,14 @@ font-size:38px;
 
 }
 
-}
+} */
 
 
 
 /*=========================================
       CTA SECTION
 =========================================*/
-
+/* 
 .certificate-cta{
 
     position:relative;
@@ -639,10 +640,10 @@ font-size:38px;
     background:
     linear-gradient(135deg,#08244D 0%,#103B72 55%,#184D90 100%);
 
-}
+} */
 
 /* Orange Glow */
-
+/* 
 .certificate-cta::before{
 
     content:"";
@@ -663,11 +664,11 @@ font-size:38px;
 
     filter:blur(90px);
 
-}
+} */
 
 /* Blue Glow */
 
-.certificate-cta::after{
+/* .certificate-cta::after{
 
     content:"";
 
@@ -757,10 +758,10 @@ font-size:38px;
 
     margin-top:45px;
 
-}
+} */
 
 /* Orange Button */
-
+/* 
 .cta-orange-btn{
 
     padding:18px 42px;
@@ -790,11 +791,11 @@ font-size:38px;
 
     background:#ff7f26;
 
-}
+} */
 
 /* Outline Button */
 
-.cta-outline-btn{
+/* .cta-outline-btn{
 
     padding:18px 42px;
 
@@ -822,13 +823,13 @@ font-size:38px;
 
     color:#08244D;
 
-}
+} */
 
 /*=========================
       Responsive
 =========================*/
 
-@media(max-width:768px){
+/* @media(max-width:768px){
 
 .certificate-cta-content h2{
 
@@ -853,7 +854,7 @@ text-align:center;
 
 }
 
-}
+} */
 
 
 
@@ -861,7 +862,8 @@ text-align:center;
         QUALITY PROMISE
 =========================================*/
 
-.quality-promise{
+/* .quality-promise{
+
 
     width:100%;
 
@@ -1020,4 +1022,557 @@ font-size:38px;
 
 }
 
+} */
+
+
+
+
+
+
+
+
+
+.certificates-page {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  color: #172033;
+}
+
+.certificate-showcase {
+  padding: 100px 7%;
+  background: #f7f9fc;
+}
+
+.certificate-heading,
+.benefits-heading {
+  max-width: 850px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.certificate-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #e87524;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.certificate-heading h1,
+.benefits-heading h2 {
+  margin: 0 0 18px;
+  color: #14213d;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.certificate-heading h1 span,
+.benefits-heading h2 span {
+  color: #e87524;
+}
+
+.certificate-heading > p,
+.benefits-heading > p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #667085;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.certificate-list {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.certificate-card {
+  display: grid;
+  grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+  gap: 45px;
+  align-items: center;
+  padding: 28px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e8edf4;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(20, 33, 61, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 42px rgba(20, 33, 61, 0.11);
+}
+
+.certificate-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 280px;
+  padding: 15px;
+  background: #f5f7fa;
+  border-radius: 10px;
+}
+
+.certificate-image img {
+  display: block;
+  width: 100%;
+  max-height: 340px;
+  object-fit: contain;
+}
+
+.certificate-content {
+  min-width: 0;
+}
+
+.certificate-number {
+  color: #e87524;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.certificate-content h2 {
+  margin: 14px 0;
+  color: #14213d;
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 800;
+}
+
+.certificate-content > p {
+  margin: 0;
+  color: #667085;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.certificate-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 28px;
+}
+
+.view-btn,
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 22px;
+  border: 1px solid #e87524;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.view-btn {
+  background: #e87524;
+  color: #ffffff;
+}
+
+.view-btn:hover {
+  background: #c95c12;
+  border-color: #c95c12;
+  transform: translateY(-2px);
+}
+
+.download-btn {
+  background: transparent;
+  color: #e87524;
+}
+
+.download-btn:hover {
+  background: #e87524;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Certificate preview modal */
+
+.certificate-modal {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(8, 15, 30, 0.88);
+  backdrop-filter: blur(6px);
+}
+
+.certificate-modal-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+  max-height: 90vh;
+  padding: 45px 12px 12px;
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.certificate-modal-content img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(90vh - 65px);
+  object-fit: contain;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  background: #14213d;
+  border: none;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 25px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.close-btn:hover {
+  background: #e87524;
+}
+
+/* Benefits section */
+
+.cert-benefits {
+  padding: 100px 7%;
+  background: #ffffff;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  padding: 30px 24px;
+  background: #ffffff;
+  border: 1px solid #e8edf4;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(20, 33, 61, 0.05);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(20, 33, 61, 0.1);
+}
+
+.benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 20px;
+  background: #fff0e5;
+  border-radius: 10px;
+  color: #e87524;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.benefit-card h3 {
+  margin: 0 0 12px;
+  color: #14213d;
+  font-size: 18px;
+}
+
+.benefit-card p {
+  margin: 0;
+  color: #667085;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* CTA section */
+
+.certificate-cta {
+  position: relative;
+  padding: 85px 7%;
+  overflow: hidden;
+  background: #14213d;
+  text-align: center;
+}
+
+.certificate-cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.certificate-cta h2 {
+  margin: 0 0 16px;
+  color: #ffffff;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.certificate-cta p {
+  margin: 0;
+  color: #d0d7e5;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.certificate-cta-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.cta-orange-btn,
+.cta-outline-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 25px;
+  border: 1px solid #e87524;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.cta-orange-btn {
+  background: #e87524;
+  color: #ffffff;
+}
+
+.cta-orange-btn:hover {
+  background: #c95c12;
+}
+
+.cta-outline-btn {
+  background: transparent;
+  color: #ffffff;
+}
+
+.cta-outline-btn:hover {
+  background: #ffffff;
+  color: #14213d;
+  border-color: #ffffff;
+}
+
+/* Quality promise */
+
+.quality-promise {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 50px;
+  align-items: center;
+  padding: 90px 7%;
+  background: #f7f9fc;
+}
+
+.quality-promise-content {
+  max-width: 650px;
+}
+
+.quality-promise-content h2 {
+  margin: 0 0 18px;
+  color: #14213d;
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.quality-promise-content > p {
+  margin: 0;
+  color: #667085;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.quality-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.quality-point {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 75px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #e8edf4;
+  border-radius: 9px;
+}
+
+.quality-point span {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  background: #fff0e5;
+  border-radius: 50%;
+  color: #e87524;
+  font-weight: 800;
+}
+
+.quality-point p {
+  margin: 0;
+  color: #344054;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .certificate-card {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .certificate-showcase,
+  .cert-benefits {
+    padding: 70px 5%;
+  }
+
+  .certificate-card {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 18px;
+  }
+
+  .certificate-image {
+    min-height: 220px;
+  }
+
+  .certificate-image img {
+    max-height: 280px;
+  }
+
+  .certificate-heading,
+  .benefits-heading {
+    margin-bottom: 38px;
+  }
+
+  .certificate-cta {
+    padding: 70px 5%;
+  }
+
+  .quality-promise {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 70px 5%;
+  }
+
+  .certificate-modal {
+    padding: 12px;
+  }
+
+  .certificate-modal-content {
+    max-height: 95vh;
+  }
+
+  .certificate-modal-content img {
+    max-height: calc(95vh - 75px);
+  }
+}
+
+@media (max-width: 480px) {
+  .certificate-heading h1,
+  .benefits-heading h2 {
+    font-size: 30px;
+  }
+
+  .certificate-actions {
+    flex-direction: column;
+  }
+
+  .view-btn,
+  .download-btn {
+    width: 100%;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-cta-actions {
+    flex-direction: column;
+  }
+
+  .cta-orange-btn,
+  .cta-outline-btn {
+    width: 100%;
+  }
+
+  .quality-points {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .certificate-card,
+  .benefit-card,
+  .view-btn,
+  .download-btn,
+  .close-btn,
+  .cta-orange-btn,
+  .cta-outline-btn {
+    transition: none;
+  }
+
+  .certificate-card:hover,
+  .benefit-card:hover {
+    transform: none;
+  }
 }
