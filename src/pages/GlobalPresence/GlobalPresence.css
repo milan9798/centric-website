@@ -1242,7 +1242,10 @@ grid-template-columns:1fr;
     background:
     linear-gradient(rgba(7,26,53,.82),
     rgba(7,26,53,.82)),
-    url("../../assets/images/global/global-cta.jpg");
+
+    /* url("../../assets/images/global/global-cta.jpg"); */
+
+     url("../../assets/images/global/g-2.jpg");
 
     background-size:cover;
 
