@@ -8,7 +8,7 @@
 
 
 
-import "./Navbar.css";
+import "./navbar.css";
 
 import logo1 from "../../assets/images/ct-logo.jpg";
 import logo2 from "../../assets/images/Ce-logo.jpg";
