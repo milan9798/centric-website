@@ -32,7 +32,9 @@ import {
 
 import Navbar from "../../components/Navbar/navbar";
 import Footer from "../../components/Footer/Footer";
-import "./Services.css";
+
+
+import "./services.css";
 
 import heroImage from "../../assets/images/services/fa-1.AVIF";
 
