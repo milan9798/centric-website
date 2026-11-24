@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar/navbar";
 import Footer from "../../components/Footer/Footer";
 import "./gallery.css";
 
+
 import heroImage from "../../assets/Gallery/g-1.jpg";
 
 import {
