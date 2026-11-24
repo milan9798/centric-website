@@ -1,3 +1,5 @@
+
+
 import Navbar from "../../../components/Navbar/navbar";
 import Footer from "../../../components/Footer/Footer";
 import "./PebStructures.css";
@@ -25,7 +27,8 @@ import logisticsImg from "../../../assets/images/PebStructures/solutions/pb-3.jp
 import commercialImg from "../../../assets/images/PebStructures/solutions/pb-4.jpg";
 
 
-import hangarImg from "../../../assets/images/Pebstructures/solutions/pb-5.jpg"; 
+import hangarImg from "../../../assets/images/PebStructures/solutions/pb-5.jpg";
+
 import coldStorageImg from "../../../assets/images/Pebstructures/solutions/pb-6.jpg";
 
 
